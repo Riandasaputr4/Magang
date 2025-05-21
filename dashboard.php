@@ -12,6 +12,27 @@
   <link rel="stylesheet" href="css/style.css"/> 
 </head>
 <body>
+  <!-- <nav>
+    <div class="logo-name">
+      <a href="dashboard.html" class="logo_name">RAG WEB UI</a>
+    </div>
+    <div class="menu-items">
+      <ul class="nav-links">
+        <li><a href="knowladge.html">
+          <i class="uil uil-desktop-alt"></i>
+          <span class="link-name">Knowladge Base</span>
+        </a></li>
+        <li><a href="chat.html">
+          <i class="uil uil-comment-alt"></i>
+          <span class="link-name">Chat</span>
+        </a></li>
+        <li><a href="api.html">
+          <i class="uil uil-user"></i>
+          <span class="link-name">API Keys</span>
+        </a></li>
+      </ul>
+    </div>
+  </nav> -->
   <nav>
     <div class="logo-name">
       <a href="dashboard.php" class="logo_name">RAG WEB UI</a>
@@ -32,7 +53,7 @@
         </a></li>
       </ul>
     </div>
-  </nav>
+  </nav> 
   <section class="dashboard">
     <div class="dash-content">
       <div class="breadcrumb">

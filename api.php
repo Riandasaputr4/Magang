@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dashboard</title>
+  <title>API</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet"/>
@@ -12,7 +12,28 @@
   <link rel="stylesheet" href="css/style.css"/> 
 </head>
 <body>
-  <nav>
+  <!-- <nav>
+    <div class="logo-name">
+      <a href="dashboard.html" class="logo_name">RAG WEB UI</a>
+    </div>
+    <div class="menu-items">
+      <ul class="nav-links">
+        <li><a href="knowladge.html">
+          <i class="uil uil-desktop-alt"></i>
+          <span class="link-name">Knowladge Base</span>
+        </a></li>
+        <li><a href="chat.html">
+          <i class="uil uil-comment-alt"></i>
+          <span class="link-name">Chat</span>
+        </a></li>
+        <li><a href="api.html">
+          <i class="uil uil-user"></i>
+          <span class="link-name">API Keys</span>
+        </a></li>
+      </ul>
+    </div>
+  </nav> -->
+   <nav>
     <div class="logo-name">
       <a href="dashboard.php" class="logo_name">RAG WEB UI</a>
     </div>
