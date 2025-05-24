@@ -49,9 +49,9 @@ textarea.addEventListener('keydown', e => {
   }
 });
 
-// Tampilkan pesan dari asisten saat pertama kali masuk halaman
 document.addEventListener('DOMContentLoaded', () => {
-  addMessage('Hi 👋 Ada yang bisa saya bantu?', 'assistant');
+  setTimeout(() => {
+    addMessage('Hi 👋 Ada yang bisa saya bantu?', 'assistant');
+  }, 1000); // Delay 1 detik setelah halaman terbuka
 });
-
 
