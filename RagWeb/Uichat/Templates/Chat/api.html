@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,32 +16,32 @@
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"/> 
 
   <!-- This my style -->
-   <link rel="stylesheet" href="css/Api.css"/>
+   <link rel="stylesheet" href="{% static 'Css/Api.css' %}"/>
 </head>
 <body>
 
   <!-- Sidebar -->
-    <nav>
+   <nav>
     <div class="logo-name">
-      <a href="dashboard.html" class="logo_name">RAG WEB UI</a>
+      <a href="{% url 'home' %}" class="logo_name">RAG WEB UI</a>
     </div>
     <div class="menu-items">
       <ul class="nav-links">
-        <li><a href="knowladge.html">
+        <li><a href="{% url 'knowladge' %}">
           <i class="uil uil-desktop-alt"></i>
           <span class="link-name">Knowladge Base</span>
         </a></li>
-        <li><a href="chat.html">
+        <li><a href="{% url 'chat' %}">
           <i class="uil uil-comment-alt"></i>
           <span class="link-name">Chat</span>
         </a></li>
-        <li><a href="api.html">
+        <li><a href="{% url 'api' %}">
           <i class="uil uil-user"></i>
           <span class="link-name">API Keys</span>
         </a></li>
       </ul>
     </div>
-  </nav> 
+  </nav>
   <!-- <nav>
     <div class="logo-name">
       <a href="dashboard.php" class="logo_name">RAG WEB UI</a>
@@ -126,7 +127,7 @@
     </div>
   </div>
 
-  <script src="JS/Api.js"></script>
+  <script src="{% static 'Js/Api.js'%}"></script>
 
 </body>
 </html>
