@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="csrf-token" content="{{ csrf_token }}">
   <title>Chat</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -23,7 +24,7 @@
   <!-- This is nvabar -->
    <nav>
     <div class="logo-name">
-      <a href="{% url 'home' %}" class="logo_name">RAG WEB UI</a>
+      <a href="{% url 'dashboardAdmin' %}" class="logo_name">RAG WEB UI</a>
     </div>
     <div class="menu-items">
       <ul class="nav-links">
@@ -92,8 +93,9 @@
             </div> -->
           </div>
           <!-- This chat input -->
-          <div class="chat-input">
-            <textarea id="composer" placeholder="Type your message..." oninput="growUp(this)"></textarea>
+          <div class="chat-input" id="chatBox">
+            {% csrf_token %}
+            <textarea id="userInput" placeholder="Type your message..." oninput="growUp(this)"></textarea>
             <div class="icon-group">
               <div class="icon search ">
                 <ion-icon name="globe-outline"></ion-icon>
@@ -106,11 +108,17 @@
                 <p>reason</p>
               </div>
               </div>
-            <button type="button" class="btn btn-secondary"><ion-icon name="send-outline"></ion-icon></button>
+            <button type="button" class="btn btn-secondary" onclick="sendMessage()"></button>
           </div>
         </div>
   </section>
 
+<script>
+const chatApiUrl = "{% url 'chat' %}";  // Django akan memproses ini dengan benar
+  if (typeof chatApiUrl === 'undefined') {
+    console.error('chatApiUrl is not defined');
+}
+</script>
 <script src="{% static 'Js/Chat.js' %}"></script>
 </script>>
 <script>

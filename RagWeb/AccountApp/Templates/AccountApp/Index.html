@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>ChatBot RAG</title>
+  <link rel="stylesheet" href="{% static 'Css/Dashboardlogin.css' %}">
+
+</head>
+<body>
+  <div class="container">
+    <!-- Kiri -->
+    <div class="left">
+    <div class="overlay">
+      <div class="logo">ChatBot RAG</div>
+      <div class="message">
+        <h1><strong>Tuliskan Pertanyaan Anda Mengenai Informasi Layanan Publik</strong></h1>
+      </div>
+    </div>
+    </div>
+
+    <!-- Kanan -->
+    <div class="right">
+      <h2>Mulai</h2>
+      <div class="buttons">
+        <a href="{% url 'login' %}" class="btn">Masuk</a>
+        <a href="{% url 'register' %}" class="btn">Daftar</a>
+      </div>
+      <div class="footer">
+        <a href="#">Syarat penggunaan</a> | 
+        <a href="#">Kebijakan privasi</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

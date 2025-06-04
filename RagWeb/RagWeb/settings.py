@@ -16,6 +16,12 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 Templates= os.path.join(BASE_DIR, 'Templates')
 
+LOGIN_URL = 'login'  # default redirect login
+LOGIN_REDIRECT_URL = '/dashboardAdmin/'  # setelah login sukses (opsional)
+
+AUTH_USER_MODEL = 'AccountApp.CustomUser'
+
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -39,9 +45,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Uichat',  # Custom app for the RAG web interface
+    'AccountApp',  # Custom app for user accounts
 ]
 
 MIDDLEWARE = [
+  # Middleware to redirect invalid URLs
+    'AccountApp.middleware.RedirectInvalidURLMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

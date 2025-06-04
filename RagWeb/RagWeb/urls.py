@@ -19,13 +19,22 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 import Uichat.views as uichat_views
+import AccountApp.views as account_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', uichat_views.home, name='home'),
+    path('', account_views.dashboard, name='dashboard'),
+    path('login/', account_views.login_view, name='login'), 
+    path('register/', account_views.register, name='register'),
+    path('dashboardAdmin/', uichat_views.dashboard_admin, name='dashboardAdmin'),
+    path('logout/', account_views.logout, name='logout'),
+    path('dashboardUser/', uichat_views.dashboardUser, name='dashboardUser'),
     path('chat/', uichat_views.chat, name='chat'),
+    path('chat/api/', uichat_views.chat_view, name='chat_view'),
     path('knowladge/', uichat_views.knowladge, name='knowladge'),
     path('api/', uichat_views.api, name='api'),
 
 ]
 
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
